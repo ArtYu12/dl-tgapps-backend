@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include('../partials/head'); %>
+</head>
+<body>
+<header class="absolute inset-x-0 top-0 z-50 flex h-16 border-b border-gray-900/10">
+    <div class="mx-auto flex w-full max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
+        <div class="flex flex-1 items-center gap-x-6">
+            <button type="button" class="-m-3 p-3 md:hidden">
+                <span class="sr-only">Open main menu</span>
+                <svg class="h-5 w-5 text-gray-900" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                    <path fill-rule="evenodd" d="M2 4.75A.75.75 0 012.75 4h14.5a.75.75 0 010 1.5H2.75A.75.75 0 012 4.75zM2 10a.75.75 0 01.75-.75h14.5a.75.75 0 010 1.5H2.75A.75.75 0 012 10zm0 5.25a.75.75 0 01.75-.75h14.5a.75.75 0 010 1.5H2.75a.75.75 0 01-.75-.75z" clip-rule="evenodd" />
+                </svg>
+            </button>
+            <div class="font-extrabold text-3xl">
+                Decentra<span class=" text-lime-600	">Learn</span>
+            </div>
+        </div>
+        <nav class="hidden md:flex md:gap-x-11 md:text-sm md:font-semibold md:leading-6 md:text-gray-700">
+            <a href="#">Home</a>
+            <a href="/admin/dashboard/users">Users</a>
+            <a href="/admin/dashboard/courses">Courses</a>
+        </nav>
+    </div>
+</header>
+<div class="bg-white">
+    <div class="mx-auto max-w-2xl px-4 py-16 sm:px-6 sm:py-24 lg:max-w-7xl lg:px-8">
+        <h2 class="text-xl font-bold text-gray-900">All courses</h2>
+
+        <div class="mt-8 grid grid-cols-1 gap-y-12 sm:grid-cols-2 sm:gap-x-6 lg:grid-cols-4 xl:gap-x-8">
+
+
+
+            <% courses.forEach(course => {%>
+                <div>
+                    <div class="relative">
+                        <div class="relative h-72 w-full overflow-hidden rounded-lg">
+                            <img src="<%= course.image %>" alt="Front of zip tote bag with white canvas, black canvas straps and handle, and black zipper pulls." class="h-full w-full object-cover object-center">
+                        </div>
+                        <div class="relative mt-4">
+                            <h3 class="text-sm font-medium text-gray-900"><%= course.title %></h3>
+                            <p class="mt-1 text-sm text-gray-500"><%= course.description %></p>
+                        </div>
+                        <div class="absolute inset-x-0 top-0 flex h-72 items-end justify-end overflow-hidden rounded-lg p-4">
+                            <div aria-hidden="true" class="absolute inset-x-0 bottom-0 h-36 bg-gradient-to-t from-black opacity-50"></div>
+
+                        </div>
+                    </div>
+                    <div class="mt-6">
+                        <a href="/admin/dashboard/course/<%= course._id %>" class="relative flex items-center justify-center rounded-md border border-transparent bg-gray-100 px-8 py-2 text-sm font-medium text-gray-900 hover:bg-gray-200">Open<span class="sr-only">, React: the complete guide</span></a>
+                    </div>
+
+                </div>
+            <% }) %>
+
+            <div>
+                <div class="relative">
+                    <div class="relative h-72 w-full overflow-hidden rounded-lg">
+                        <div class="w-full bg-lime-700 h-full"></div>
+                    </div>
+                    <div class="relative mt-4">
+                        <h3 class="text-sm font-medium text-gray-900">Add new course</h3>
+                        <p class="mt-1 text-sm text-gray-500">Let`s create new course</p>
+                    </div>
+                    <div class="absolute inset-x-0 top-0 flex h-72 items-end justify-end overflow-hidden rounded-lg p-4">
+                        <div aria-hidden="true" class="absolute inset-x-0 bottom-0 h-36 bg-gradient-to-t from-black opacity-50"></div>
+
+                    </div>
+                </div>
+                <div class="mt-6">
+                    <a href="#" class="relative flex items-center justify-center rounded-md border border-transparent bg-lime-100 px-8 py-2 text-sm font-medium text-gray-900 hover:bg-gray-200">Add<span class="sr-only">, React: the complete guide</span></a>
+                </div>
+
+            </div>
+
+
+            <!-- More products... -->
+        </div>
+
+    </div>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include('../partials/head'); %>
+</head>
+<body class="h-full">
+
+<header class="absolute inset-x-0 top-0 z-50 flex h-16 border-b border-gray-900/10">
+    <div class="mx-auto flex w-full max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
+        <div class="flex flex-1 items-center gap-x-6">
+            <button type="button" class="-m-3 p-3 md:hidden">
+                <span class="sr-only">Open main menu</span>
+                <svg class="h-5 w-5 text-gray-900" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                    <path fill-rule="evenodd" d="M2 4.75A.75.75 0 012.75 4h14.5a.75.75 0 010 1.5H2.75A.75.75 0 012 4.75zM2 10a.75.75 0 01.75-.75h14.5a.75.75 0 010 1.5H2.75A.75.75 0 012 10zm0 5.25a.75.75 0 01.75-.75h14.5a.75.75 0 010 1.5H2.75a.75.75 0 01-.75-.75z" clip-rule="evenodd" />
+                </svg>
+            </button>
+            <div class="font-extrabold text-3xl">
+                Decentra<span class=" text-lime-600	">Learn</span>
+            </div>
+        </div>
+        <nav class="hidden md:flex md:gap-x-11 md:text-sm md:font-semibold md:leading-6 md:text-gray-700">
+            <a href="#">Home</a>
+            <a href="/admin/dashboard/users">Users</a>
+            <a href="/admin/dashboard/courses">Courses</a>
+        </nav>
+    </div>
+</header>
+
+<main>
+    <div class="relative isolate overflow-hidden pt-16">
+        <!-- Secondary navigation -->
+        <header class="pb-4 pt-6 sm:pb-6">
+            <div class="mx-auto flex max-w-7xl flex-wrap items-center gap-6 px-4 sm:flex-nowrap sm:px-6 lg:px-8">
+                <h1 class="text-base font-semibold leading-7 text-gray-900">Main metrics</h1>
+            </div>
+        </header>
+
+        <!-- Stats -->
+        <div class="border-b border-b-gray-900/10 lg:border-t lg:border-t-gray-900/5">
+            <dl class="mx-auto grid max-w-7xl grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 lg:px-2 xl:px-0">
+                <div class="flex items-baseline flex-wrap justify-between gap-y-2 gap-x-4 border-t border-gray-900/5 px-4 py-10 sm:px-6 lg:border-t-0 xl:px-8">
+                    <dt class="text-sm font-medium leading-6 text-gray-500">Total users</dt>
+                    <dd class="w-full flex-none text-3xl font-medium leading-10 tracking-tight text-gray-900"><%= totalUsers %></dd>
+                </div>
+                <div class="flex items-baseline flex-wrap justify-between gap-y-2 gap-x-4 border-t border-gray-900/5 px-4 py-10 sm:px-6 lg:border-t-0 xl:px-8 sm:border-l">
+                    <dt class="text-sm font-medium leading-6 text-gray-500">Joined today</dt>
+                    <dd class="w-full flex-none text-3xl font-medium leading-10 tracking-tight text-gray-900"><%= joinedToday %></dd>
+                </div>
+                <div class="flex items-baseline flex-wrap justify-between gap-y-2 gap-x-4 border-t border-gray-900/5 px-4 py-10 sm:px-6 lg:border-t-0 xl:px-8 lg:border-l">
+                    <dt class="text-sm font-medium leading-6 text-gray-500">Courses count</dt>
+                    <dd class="w-full flex-none text-3xl font-medium leading-10 tracking-tight text-gray-900"><%= totalCourses %></dd>
+                </div>
+            </dl>
+        </div>
+
+        <div class="absolute left-0 top-full -z-10 mt-96 origin-top-left translate-y-40 -rotate-90 transform-gpu opacity-20 blur-3xl sm:left-1/2 sm:-ml-96 sm:-mt-10 sm:translate-y-0 sm:rotate-0 sm:transform-gpu sm:opacity-50" aria-hidden="true">
+            <div class="aspect-[1154/678] w-[72.125rem] bg-gradient-to-br from-[#FF80B5] to-[#9089FC]" style="clip-path: polygon(100% 38.5%, 82.6% 100%, 60.2% 37.7%, 52.4% 32.1%, 47.5% 41.8%, 45.2% 65.6%, 27.5% 23.4%, 0.1% 35.3%, 17.9% 0%, 27.7% 23.4%, 76.2% 2.5%, 74.2% 56%, 100% 38.5%)"></div>
+        </div>
+    </div>
+</main>
+
+
+</body>

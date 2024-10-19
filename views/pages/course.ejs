@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include('../partials/head'); %>
+</head>
+<body>
+<header class="absolute inset-x-0 top-0 z-50 flex h-16 border-b border-gray-900/10">
+    <div class="mx-auto flex w-full max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
+        <div class="flex flex-1 items-center gap-x-6">
+            <button type="button" class="-m-3 p-3 md:hidden">
+                <span class="sr-only">Open main menu</span>
+                <svg class="h-5 w-5 text-gray-900" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                    <path fill-rule="evenodd" d="M2 4.75A.75.75 0 012.75 4h14.5a.75.75 0 010 1.5H2.75A.75.75 0 012 4.75zM2 10a.75.75 0 01.75-.75h14.5a.75.75 0 010 1.5H2.75A.75.75 0 012 10zm0 5.25a.75.75 0 01.75-.75h14.5a.75.75 0 010 1.5H2.75a.75.75 0 01-.75-.75z" clip-rule="evenodd" />
+                </svg>
+            </button>
+            <div class="font-extrabold text-3xl">
+                Decentra<span class=" text-lime-600	">Learn</span>
+            </div>
+        </div>
+        <nav class="hidden md:flex md:gap-x-11 md:text-sm md:font-semibold md:leading-6 md:text-gray-700">
+            <a href="#">Home</a>
+            <a href="/admin/dashboard/users">Users</a>
+            <a href="/admin/dashboard/courses">Courses</a>
+        </nav>
+    </div>
+</header>
+
+<div class="bg-white">
+    <div class="mx-auto px-4 py-16 sm:px-6 sm:py-24 lg:max-w-7xl lg:px-8">
+        <!-- Product -->
+        <div class="lg:grid lg:grid-cols-7 lg:grid-rows-1 lg:gap-x-8 lg:gap-y-10 xl:gap-x-16">
+            <!-- Product image -->
+            <div class="lg:col-span-4 lg:row-end-1">
+                <div class="aspect-h-3 aspect-w-4 overflow-hidden rounded-lg ">
+                    <img src="https://img-c.udemycdn.com/course/480x270/437398_46c3_10.jpg" alt="Sample of 30 icons with friendly and fun details in outline, filled, and brand color styles." class="object-cover object-center">
+                </div>
+            </div>
+
+            <!-- Product details -->
+            <div class="mx-auto mt-14 max-w-2xl sm:mt-16 lg:col-span-3 lg:row-span-2 lg:row-end-2 lg:mt-0 lg:max-w-none">
+                <div class="flex flex-col-reverse">
+                    <div class="mt-4">
+                        <h1 class="text-2xl font-bold tracking-tight text-gray-900 sm:text-3xl">Web Development: from Zero to Hero</h1>
+
+                        <h2 id="information-heading" class="sr-only">Product information</h2>
+                        <p class="mt-2 text-sm text-gray-500">Version 1.0 (Updated <time datetime="2021-06-05">October 13, 2024</time>)</p>
+                    </div>
+
+                    <div>
+                        <h3 class="sr-only">Reviews</h3>
+
+                        <p class="sr-only">4 out of 5 stars</p>
+                    </div>
+                </div>
+
+                <p class="mt-6 text-gray-500">Learn web development from scratch</p>
+
+                <div class="mt-10 grid grid-cols-1 gap-x-6 gap-y-4 sm:grid-cols-2">
+                    <button type="button" class="flex w-full items-center justify-center rounded-md border border-transparent bg-indigo-600 px-8 py-3 text-base font-medium text-white hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 focus:ring-offset-gray-50">Edit</button>
+                </div>
+
+
+
+                <div class="mt-10 border-t border-gray-200 pt-10">
+                    <h3 class="text-sm font-medium text-gray-900">Info</h3>
+                    <div class="prose prose-sm mt-4 text-gray-500">
+                        <ul role="list">
+                            <li>Author: undefined team</li>
+                            <li>Price: free</li>
+                            <li>Bonuse after complition: 1000</li>
+                            <li>Minimum skill for start: beginner</li>
+                            <li>Category: Web </li>
+                            <li>Modules: 30</li>
+                        </ul>
+                    </div>
+                </div>
+
+
+
+
+            </div>
+
+            <div class="mx-auto mt-16 w-full max-w-2xl lg:col-span-4 lg:mt-0 lg:max-w-none">
+                <div>
+                    <h3 class=" font-bold text-2xl">Users</h3>
+
+                    <!-- 'Customer Reviews' panel, show/hide based on tab state -->
+                    <ul role="list" class="divide-y divide-gray-100">
+                        <li class="flex gap-x-4 py-5">
+                            <img class="h-12 w-12 flex-none rounded-full bg-gray-50" src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80" alt="">
+                            <div class="min-w-0">
+                                <p class="text-sm font-semibold leading-6 text-gray-900">Leslie Alexander</p>
+                                <p class="mt-1 truncate text-xs leading-5 text-gray-500">Module: 29/30</p>
+                            </div>
+                        </li>
+                        <li class="flex gap-x-4 py-5">
+                            <img class="h-12 w-12 flex-none rounded-full bg-gray-50" src="https://images.unsplash.com/photo-1519244703995-f4e0f30006d5?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80" alt="">
+                            <div class="min-w-0">
+                                <p class="text-sm font-semibold leading-6 text-gray-900">Michael Foster</p>
+                                <p class="mt-1 truncate text-xs leading-5 text-gray-500">Module: 26/30</p>
+                            </div>
+                        </li>
+                        <li class="flex gap-x-4 py-5">
+                            <img class="h-12 w-12 flex-none rounded-full bg-gray-50" src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80" alt="">
+                            <div class="min-w-0">
+                                <p class="text-sm font-semibold leading-6 text-gray-900">Dries Vincent</p>
+                                <p class="mt-1 truncate text-xs leading-5 text-gray-500">Module: 21/30</p>
+                            </div>
+                        </li>
+                        <li class="flex gap-x-4 py-5">
+                            <img class="h-12 w-12 flex-none rounded-full bg-gray-50" src="https://images.unsplash.com/photo-1517841905240-472988babdf9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80" alt="">
+                            <div class="min-w-0">
+                                <p class="text-sm font-semibold leading-6 text-gray-900">Lindsay Walton</p>
+                                <p class="mt-1 truncate text-xs leading-5 text-gray-500">Module: 17/30</p>
+                            </div>
+                        </li>
+                        <li class="flex gap-x-4 py-5">
+                            <img class="h-12 w-12 flex-none rounded-full bg-gray-50" src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80" alt="">
+                            <div class="min-w-0">
+                                <p class="text-sm font-semibold leading-6 text-gray-900">Courtney Henry</p>
+                                <p class="mt-1 truncate text-xs leading-5 text-gray-500">Module: 5/30</p>
+                            </div>
+                        </li>
+                        <li class="flex gap-x-4 py-5">
+                            <img class="h-12 w-12 flex-none rounded-full bg-gray-50" src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80" alt="">
+                            <div class="min-w-0">
+                                <p class="text-sm font-semibold leading-6 text-gray-900">Tom Cook</p>
+                                <p class="mt-1 truncate text-xs leading-5 text-gray-500">Module: 2/30</p>
+                            </div>
+                        </li>
+                    </ul>
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+</body>
+</html>
